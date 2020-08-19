@@ -1,0 +1,46 @@
+title: "Case Study: Employee Attrition Analysis"
+author: "Amber Lea Clark"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#libraries
+library(tidyverse)
+library(dplyr)
+library(plotly)
+library(ggplot2)
+
+
+#data
+EmployeesRaw <- read.csv(file ='/Users/Amber/Downloads/CaseStudyFinal/CaseStudy2-data.csv')
+
+#confirm data loaded
+print(EmployeesRaw)
+
+#employee stats
+employees_by_year <- EmployeesRaw %>%  group_by(YearsAtCompany) %>% summarize(count = n())
+
+EmployeeStats %>% ggplot(aes(x=Department)) + geom_histogram(stat="YearsAtComplany)
+
+
+# Intial Stats on Employees
+EmployeeStats %>% ggplot(aes(x=Department)) + geom_histogram(stat="YearsAtComplany)
+
+
+#7 scatterplots for Employees
+combined_df %>% ggplot(aes(x=Attrition,y=Department)) + geom_boxplot() 
+
+combined_df %>% ggplot(aes(x=Attrition,y=Education))
+
+#8 knn classifications
+#reference code:
+#row_to_keep = c(TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE)
+#myData = myData[row_to_keep,]
+
+employee_data <- grepl("attrition", combined_df$Style)
+attrition_df = combined_df[employee_data,]
