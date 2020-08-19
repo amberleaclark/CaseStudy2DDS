@@ -39,8 +39,7 @@ combined_df %>% ggplot(aes(x=Attrition,y=Education))
 
 #8 knn classifications
 #reference code:
-#row_to_keep = c(TRUE, FALSE, TRUE, FALSE, TRUE, FALSE, TRUE)
-#myData = myData[row_to_keep,]
+#row_to_keep = c(####)
 
 employee_data <- grepl("attrition", combined_df$Style)
 attrition_df = combined_df[employee_data,]
